@@ -1,0 +1,21 @@
+name: "network-har-recorder"
+description: "Monitors network requests, captures HAR archives, and extracts API traffic payloads."
+input_schema:
+  type: object
+  properties:
+    command:
+      type: string
+      description: "Network recorder action."
+      enum: ["start", "stop", "export", "filter"]
+    output_path:
+      type: string
+      description: "Destination file path for exported HAR archive."
+    url_pattern:
+      type: string
+      description: "URL glob or regex filter to include in capture logs."
+    include_response_bodies:
+      type: boolean
+      description: "Whether to capture full response payloads or headers only."
+      default: false
+  required:
+    - command

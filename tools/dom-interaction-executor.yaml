@@ -1,0 +1,25 @@
+name: "dom-interaction-executor"
+description: "Executes clicks, text input, keyboard navigation, and form submissions on target web elements."
+input_schema:
+  type: object
+  properties:
+    element_ref:
+      type: string
+      description: "Unique accessibility element reference (e.g., @e1, @e4) or CSS/XPath locator."
+    action_type:
+      type: string
+      description: "Type of synthetic user interaction to perform."
+      enum: ["click", "double_click", "hover", "type", "press_key", "clear", "select_option", "scroll_into_view"]
+    text_value:
+      type: string
+      description: "Text string to input when action_type is 'type'."
+    key_code:
+      type: string
+      description: "Key identifier to press when action_type is 'press_key' (e.g., 'Enter', 'Tab')."
+    timeout_ms:
+      type: integer
+      description: "Maximum duration to wait for element interactability in milliseconds."
+      default: 10000
+  required:
+    - element_ref
+    - action_type

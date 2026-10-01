@@ -1,0 +1,22 @@
+name: "accessibility-tree-snapshotter"
+description: "Captures hierarchical accessibility trees and generates compact element reference identifiers."
+input_schema:
+  type: object
+  properties:
+    include_hidden:
+      type: boolean
+      description: "Whether to include hidden or off-screen accessibility nodes."
+      default: false
+    filter_interactive_only:
+      type: boolean
+      description: "Whether to filter output strictly to clickable or focusable interactive elements."
+      default: true
+    max_depth:
+      type: integer
+      description: "Maximum tree traversal depth."
+      default: 10
+    capture_screenshot:
+      type: boolean
+      description: "Whether to synchronously capture a visual viewport screenshot alongside the tree."
+      default: false
+  required: []

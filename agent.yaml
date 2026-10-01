@@ -1,0 +1,22 @@
+spec_version: "0.1.0"
+name: "agent-browser"
+version: "0.38.1"
+description: "Fast browser automation CLI and Chrome DevTools Protocol orchestration engine for autonomous AI agents."
+author: "Vercel Labs & OpenGAP Contributors"
+license: "Apache-2.0"
+metadata:
+  domain: "Developer Tools / Browser Automation & Web AI"
+  category: "Developer Tools"
+  framework: "Rust Native CLI & Chrome DevTools Protocol"
+  language: "Rust, TypeScript, JavaScript"
+skills:
+  - "agent-browser"
+  - "dom-accessibility-inspection"
+  - "auth-vault-session-management"
+  - "electron-desktop-automation"
+tools:
+  - "browser-session-controller"
+  - "dom-interaction-executor"
+  - "accessibility-tree-snapshotter"
+  - "session-storage-vault"
+  - "network-har-recorder"

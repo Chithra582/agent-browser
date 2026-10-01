@@ -1,0 +1,22 @@
+name: "session-storage-vault"
+description: "Stores and restores authenticated session cookies, local storage state, and security tokens."
+input_schema:
+  type: object
+  properties:
+    operation:
+      type: string
+      description: "Storage vault operation to perform."
+      enum: ["save", "restore", "clear", "inspect"]
+    vault_name:
+      type: string
+      description: "Identifier for the target authentication vault snapshot."
+    domain:
+      type: string
+      description: "Target domain scope for cookie and storage isolation."
+    encrypt:
+      type: boolean
+      description: "Whether to encrypt saved tokens at rest using local keyring."
+      default: true
+  required:
+    - operation
+    - vault_name
